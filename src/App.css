@@ -1,0 +1,13 @@
+.element::after {
+  display: block;
+  content: "";
+  clear: both; }
+
+.floating {
+  float: left; }
+
+.small-padding-left {
+  padding-left: 0.25em; }
+
+.hidden {
+  display: none; }

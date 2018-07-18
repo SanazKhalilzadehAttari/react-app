@@ -1,0 +1,18 @@
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+.element {
+  @include clearfix;
+}
+.floating{
+	float:left;
+}
+.small-padding-left{
+	padding-left: 0.25em;
+}
+.hidden { display:none; }
