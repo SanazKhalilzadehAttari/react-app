@@ -6,25 +6,36 @@ class RatingCalculate extends Component {
 		super(props);
 	}
   calculate = function(){
-    var calculate = [];
+    var calculateParams = [];
+    var rateCloud ;
+    var cloudx= 0;
+    var cloudflow = 0;
+    var cloudventure= 0;
+    var cloudsurfer= 0;
+    var cloudventure_waterproof= 0;
+    var cloudventure_peak= 0;
+    var cloudventure_midtop= 0;
+    var cloudrush= 0;
+    var cloudflash= 0;
+    var cloudflyer= 0;
+    var cloudcruiser= 0;
     if(this.props.selected !== null){
-       for (var i = 0; i < this.props.data.length; i++) {
-         var item = [];
-       if(this.props.questionId === this.props.data[i].id){
-           this.item = this.props.data[i].answers;
-           console.log('item',this.item);
-       }
-          for(var j=0; j< this.item.length; j++){
-            var answerItem ='';
-            if(this.props.selected === this.item[j].copy){
-              console.log('answer',this.item[j]);
+      var questionNum = this.props.questionId;
+      var answers = this.props.data[questionNum].answers;
+       for (var i = 0; i <answers.length; i++) {
+          if(this.props.selected === answers[i].copy){
+            debugger;
+            answers[i].ratingIncrease.map((params, i) =>{
+              calculateParams.push(params); 
+            }) ;
             }
           }
-  }
-}
-  }
+        }
+      
+    }
 	
   render() {
+  
     
     return (
       <div>
