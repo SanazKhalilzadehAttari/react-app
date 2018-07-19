@@ -24,9 +24,7 @@ class RatingCalculate extends Component {
       var answers = this.props.data[questionNum].answers;
        for (var i = 0; i <answers.length; i++) {
           if(this.props.selected === answers[i].copy){
-            debugger;
-            answers[i].ratingIncrease.map((params, i) =>{
-              calculateParams.push(params); 
+            answers[i].ratingIncrease.cloud;
             }) ;
             }
           }
