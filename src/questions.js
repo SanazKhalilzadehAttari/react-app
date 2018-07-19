@@ -8,17 +8,19 @@ class Questions extends Component {
   constructor(props){
     super(props);
     this.state ={
-     selectedItem : [0],
+     selectedItem : '',
+     selectedNextItem:[0],
      questionSelected : 0
     };
     this.getData = this.getData.bind(this);
   }
 
-  getData = function(val, id){
+  getData = function(val, id, currentString){
     //console.log(val);
     this.setState({
-      selectedItem : val,
-      questionSelected : id
+      selectedNextItem : val,
+      questionSelected : id,
+      selectedItem: currentString
     });
   };
 
@@ -49,10 +51,9 @@ class Questions extends Component {
               
               );
          })
-
            
     }
-      <div>              
+      <div>             
           <RatingCalculate questionId={this.state.questionSelected} data={this.props.questions} selected={this.state.selectedItem}/>
       </div>     
     </div>
